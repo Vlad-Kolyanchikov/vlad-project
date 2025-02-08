@@ -1,0 +1,45 @@
+.footer {
+  background-color: #070303;
+  line-height: 1.73;
+  padding: 64px 0 60px;
+
+  &__container {
+    display: flex;
+  }
+
+  &__list {
+    display: flex;
+  }
+
+  &__logo {
+    margin-bottom: 22px;
+  }
+
+  &__address {
+    color: #FFFFFF;
+    margin-bottom: 9px;
+  }
+
+  &__column {
+    &:first-child {
+      margin-right: 51px;
+    }
+  }
+
+  &__column-subtitle {
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin-bottom: 9px;
+  }
+
+  &__contacts-list {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+  }
+
+  &__contacts-link {
+    color: $light-orange;
+  }
+
+}

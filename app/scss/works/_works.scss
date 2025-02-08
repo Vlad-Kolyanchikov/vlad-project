@@ -1,0 +1,61 @@
+.our-works {
+
+  &__filter {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 50px;
+  }
+
+  &__btn {
+    font-size: 16px;
+    color: #FFFFFF;
+    padding: 11px 26px;
+    border-radius: 4px;
+    color: $black;
+    background-color: #F5F4FA;
+    transition: color, background-color 0.4s;
+
+    &.mixitup-control-active {
+      color: #FFFFFF;
+      background-color: $orange;
+    }
+  }
+
+  &__content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column-reverse;
+    max-width: 370px;
+    width: 100%;
+  }
+
+  &__img {
+    object-fit: cover;
+  }
+
+  &__info {
+    padding: 20px 24px;
+    border: 1px solid $gray;
+    border-top: none;
+  }
+
+  &__subtitle {
+    color: $black;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+    margin-bottom: 4px;
+  }
+
+  &__desc {
+    color: $gray;
+    line-height: 2.15;
+  }
+}

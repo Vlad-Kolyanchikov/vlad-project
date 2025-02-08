@@ -1,0 +1,37 @@
+.partners {
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    color: $gray;
+  }
+
+  &__link {
+    width: 170px;
+    height: 92px;
+    border: 1px solid $gray;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.4s, border-color 0.4s;
+
+    &:focus {
+      outline: 1px solid $orange;
+      outline-offset: 4px;
+    }
+
+    &:hover {
+      color: $orange;
+      border-color: $orange;
+    }
+
+    &:active {
+      color: rgba($orange, $alpha: 0.7);
+      border-color: rgba($orange, $alpha: 0.7);
+    }
+  }
+
+}

@@ -1,0 +1,33 @@
+.services {
+  padding-top: 0;
+
+  &__list {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+
+  }
+
+  &__item {
+    position: relative;
+    text-align: center;
+
+    &__img {
+      object-fit: cover;
+    }
+  }
+
+  &__subtitle {
+    z-index: 2;
+    left: 0;
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+    color: #FFFFFF;
+    font-size: 16px;
+    text-transform: uppercase;
+    background-color: rgba(47, 48, 58, 0.6);
+    padding: 25px 0;
+  }
+}
