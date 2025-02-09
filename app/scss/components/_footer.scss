@@ -20,13 +20,11 @@
     margin-bottom: 9px;
   }
 
-  &__column {
-    &:first-child {
-      margin-right: 51px;
-    }
+  &__inner {
+    margin-right: 51px;
   }
 
-  &__column-subtitle {
+  &__subtitle {
     text-transform: uppercase;
     color: #FFFFFF;
     margin-bottom: 9px;
@@ -40,6 +38,22 @@
 
   &__contacts-link {
     color: $light-orange;
+    transition: color 0.4s;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    padding: 4px 4px 8px;
+
+    &:focus {
+      border-color: $orange;
+    }
+
+    &:hover {
+      color: $orange;
+    }
+
+    &:active {
+      color: rgba($light-orange, 0.6);
+    }
   }
 
 }

@@ -57,6 +57,16 @@
   </header>
 
   <main class="main">
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button class="modal__close-btn" type="button" data-modal-close>
+          <svg width="30" height="30">
+            <use href="./images/sprite.svg#icon-Cancel"></use>
+          </svg>
+          <p class="sr-only">Modal window close button</p>
+        </button>
+      </div>
+    </div>
     <section class="hero">
       <div class="hero__slider">
         <div class="hero__slider-item" style="background-image: url('./images/hero-slider/slider-img-1.jpg');">
@@ -70,7 +80,7 @@
         <h1 class="hero__title">
           author's forge where your sites are created
         </h1>
-        <button type="button" class="button">
+        <button type="button" class="button" data-modal-open>
           Go to order
         </button>
       </div>
@@ -345,42 +355,42 @@
         <ul class="partners__list">
           <li class="partners__item">
             <a href="#" class="partners__link">
-              <svg class="partners__icon icon" width="60" height="60">
+              <svg class="icon" width="60" height="60">
                 <use href="./images/sprite.svg#icon-rails"></use>
               </svg>
             </a>
           </li>
           <li class="partners__item">
             <a href="#" class="partners__link">
-              <svg class="partners__icon icon" width="60" height="60">
+              <svg class="icon" width="60" height="60">
                 <use href="./images/sprite.svg#icon-googlepay"></use>
               </svg>
             </a>
           </li>
           <li class="partners__item">
             <a href="#" class="partners__link">
-              <svg class="partners__icon icon" width="60" height="60">
+              <svg class="icon" width="60" height="60">
                 <use href="./images/sprite.svg#icon-playstation"></use>
               </svg>
             </a>
           </li>
           <li class="partners__item">
             <a href="#" class="partners__link">
-              <svg class="partners__icon icon" width="60" height="60">
+              <svg class="icon" width="60" height="60">
                 <use href="./images/sprite.svg#icon-applepay"></use>
               </svg>
             </a>
           </li>
           <li class="partners__item">
             <a href="#" class="partners__link">
-              <svg class="partners__icon icon" width="60" height="60">
+              <svg class="icon" width="60" height="60">
                 <use href="./images/sprite.svg#icon-npm"></use>
               </svg>
             </a>
           </li>
           <li class="partners__item">
             <a href="#" class="partners__link">
-              <svg class="partners__icon icon" width="60" height="60">
+              <svg class="icon" width="60" height="60">
                 <use href="./images/sprite.svg#icon-ubereats"></use>
               </svg>
             </a>
@@ -394,7 +404,7 @@
 
   <footer class="footer">
     <div class="container footer__container">
-      <div class="footer__column">
+      <div class="footer__inner">
         <a href="#" class="logo footer__logo">
           <img width="140" height="25" src="images/logo/logo-white.svg" alt="logo DolGuldur" class="logo__img">
         </a>
@@ -414,10 +424,10 @@
           </ul>
         </address>
       </div>
-      <div class="footer__column">
-        <h4 class="footer__column-subtitle">
+      <div class="footer__social-wrapper">
+        <p class="footer__subtitle">
           Join
-        </h4>
+        </p>
         <ul class="social">
           <li class="social__item">
             <a href="#" class="social__link social__link--dark">
@@ -448,6 +458,11 @@
             </a>
           </li>
         </ul>
+      </div>
+      <div class="footer__form">
+        <p class="footer__subtitle">
+
+        </p>
       </div>
     </div>
 
