@@ -57,16 +57,6 @@
   </header>
 
   <main class="main">
-    <div class="backdrop is-hidden" data-modal>
-      <div class="modal">
-        <button class="modal__close-btn" type="button" data-modal-close>
-          <svg width="30" height="30">
-            <use href="./images/sprite.svg#icon-Cancel"></use>
-          </svg>
-          <p class="sr-only">Modal window close button</p>
-        </button>
-      </div>
-    </div>
     <section class="hero">
       <div class="hero__slider">
         <div class="hero__slider-item" style="background-image: url('./images/hero-slider/slider-img-1.jpg');">
@@ -84,6 +74,16 @@
           Go to order
         </button>
       </div>
+      </div>
+      <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+          <button class="modal__close-btn" type="button" data-modal-close>
+            <svg class="modal__svg" width="30" height="30">
+              <use href="./images/sprite.svg#icon-cancel"></use>
+            </svg>
+            <span class="sr-only">Modal window close button</span>
+          </button>
+        </div>
       </div>
     </section>
 
@@ -425,9 +425,9 @@
         </address>
       </div>
       <div class="footer__social-wrapper">
-        <p class="footer__subtitle">
+        <span class="footer__subtitle">
           Join
-        </p>
+        </span>
         <ul class="social">
           <li class="social__item">
             <a href="#" class="social__link social__link--dark">

@@ -46,7 +46,7 @@ $(function () {
 
 $(function () {
   $('.button, .modal__close-btn').on('click', function () {
-    $('body').toggleClass('body-lock');
+    $('body').toggleClass('lock');
   })
 });
 

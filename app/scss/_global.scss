@@ -6,11 +6,12 @@ body {
   letter-spacing: 0.03em;
   background-color: #FFFFFF;
   height: 100%;
+
+  &.lock {
+    overflow: hidden;
+  }
 }
 
-.body-lock{
-  overflow: hidden;
-}
 
 .sr-only {
   position: absolute;
@@ -33,9 +34,28 @@ body {
 
 .logo {
   display: inline-block;
+  border-radius: 4px;
+  outline: 1px solid transparent;
+  transition: opacity 0.4s, outline-color 0.4s;
 
   &__img {
     object-fit: cover;
+  }
+
+  transition: outline 0.4s,
+  box-shadow 0.4s;
+
+  &:focus {
+    outline-color: $orange;
+    outline-offset: 4px;
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    box-shadow: inset 3px 3px 8px rgba(0, 0, 0, 0.4);
   }
 }
 
@@ -45,11 +65,12 @@ body {
   font-weight: 700;
   line-height: 1.73;
   letter-spacing: 0.06em;
+  outline: 1px solid transparent;
   background-color: $orange;
-  transition: outline 0.4s, box-shadow 0.4s;
+  transition: outline-color 0.4s, box-shadow 0.4s;
 
   &:focus {
-    outline: 1px solid $orange;
+    outline-color: $orange;
     outline-offset: 4px;
   }
 
@@ -67,26 +88,29 @@ body {
   z-index: 5;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100vh;
+  width: 100dvw;
+  height: 100dvh;
   opacity: 1;
   pointer-events: all;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: rgba(0, 0, 0, 0.3);
-}
+  backdrop-filter: blur(2px);
 
-.is-hidden {
-  pointer-events: none;
-  opacity: 0;
-  .modal{
-    transform: scale(0);
+  &.is-hidden {
+    pointer-events: none;
+    opacity: 0;
+    backdrop-filter: blur(0px);
+    transition: opacity 0.4s, backdrop-filter 0.4s;
+
+    .modal {
+      transform: scale(0);
+    }
   }
 }
 
 .modal {
-  transition: transform 0.5s;
   transform: scale(1);
   position: relative;
   z-index: 7;
@@ -96,6 +120,11 @@ body {
   background-color: #FFFFFF;
   padding: 8px;
   box-shadow: 8px 8px 3px rgba(0, 0, 0, 0.12);
+  transition: transform 0.5s;
+
+  &__svg {
+    fill: currentColor;
+  }
 
   &__close-btn {
     display: flex;
@@ -108,6 +137,21 @@ body {
     height: 44px;
     border-radius: 50%;
     border: 1px solid rgba(0, 0, 0, 0.1);
+    transition: color 0.4s, border-color 0.4s, box-shadow 0.4s;
+
+    &:focus {
+      border-color: $orange;
+    }
+
+    &:hover {
+      color: $orange;
+    }
+
+    &:active {
+      box-shadow: inset 3px 3px 3px rgba(0, 0, 0, 0.12);
+      color: $orange;
+    }
+
   }
 }
 
@@ -166,7 +210,6 @@ body {
     align-items: center;
     width: 44px;
     height: 44px;
-    border: 1px solid transparent;
     border-radius: 50%;
     background-size: auto;
     background-position: center;
@@ -189,6 +232,7 @@ body {
     }
 
     &:active {
+      color: #FFFFFF;
       background-color: $orange;
       box-shadow: inset 0 4px 4px rgba(0, 0, 0, 0.25);
     }
