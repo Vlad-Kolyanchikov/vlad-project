@@ -117,7 +117,7 @@
             </label>
             <div class="form__box--agree">
               <label class="form__label form__label--agree">
-                <input required class="sr-only form__checkbox" type="checkbox">
+                <input required class="sr-only form__checkbox" type="checkbox" name="checkbox">
                 <span class="form__checkbox-style"></span>
                 I agree to the subscription and accept the
                 <a href="#" class="form__link">terms of use</a>
@@ -544,7 +544,8 @@
       </span>
       <form class="footer__form">
         <label for="footer-email" class="footer__label">
-          <input id="footer-email" type="email" class="form__input footer__input" placeholder="E-mail">
+          <input required id="footer-email" type="email" name="footer-email" class="form__input footer__input"
+            placeholder="E-mail">
         </label>
         <button type="button" class="footer__btn button">
           Subscribe
