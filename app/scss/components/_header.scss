@@ -35,9 +35,7 @@
     padding: 20px 0;
     position: relative;
     border-radius: 4px;
-    outline: 1px solid transparent;
-    outline-offset:  4px;
-    transition: outline-color 0.4s, color 0.4s;
+    transition: outline 0.4s, color 0.4s;
 
     &:after {
       position: absolute;
@@ -52,7 +50,8 @@
       transition: background-color 0.4s;
     }
 
-    &.current, &:hover {
+    &.current,
+    &:hover {
       color: $orange;
 
       &:after {
@@ -61,7 +60,8 @@
     }
 
     &:focus {
-      outline-color: $orange;
+      outline: 1px solid $orange;
+      outline-offset: 4px;
     }
 
     &:active {
@@ -79,13 +79,12 @@
     gap: 10px;
     align-items: center;
     color: $gray;
-    outline: 1px solid transparent;
-    outline-offset: 4px;
     border-radius: 4px;
-    transition: color 0.4s, outline-color 0.4s;
+    transition: color 0.4s, outline 0.4s;
 
     &:focus {
-      outline-color: $orange;
+      outline: 1px solid;
+      outline-offset: 4px;
     }
 
     &:hover {

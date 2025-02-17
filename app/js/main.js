@@ -45,7 +45,7 @@ $(function () {
 //для того чтобы не скролилась страница, по клику на кнопку с классом button для body добавляю класс body-lock и потом чтобы при закрытии модалки можнно было скролить странцу далее удаляю класс body-lock для body-lock
 
 $(function () {
-  $('.button, .modal__close-btn').on('click', function () {
+  $('.button-modal, .modal__close-btn').on('click', function () {
     $('body').toggleClass('lock');
   })
 });

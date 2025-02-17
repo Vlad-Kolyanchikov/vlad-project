@@ -6,7 +6,8 @@ const browserSync = require('browser-sync').create();
 const uglify = require('gulp-uglify');
 const autoprefixer = require('gulp-autoprefixer');
 const rename = require('gulp-rename');
-// const svgstore = require('gulp-svgstore');
+const fileinclude = require('gulp-file-include');
+
 
 function browsersync() {
   browserSync.init({
@@ -32,8 +33,7 @@ function scripts() {
 }
 
 function styles() {
-  return src(['node_modules/slick-carousel/slick/slick.css',
-    'app/scss/*.scss'])
+  return src(['app/scss/*.scss'])
     .pipe(scss({ outputStyle: 'compressed' }))
     .pipe(rename({
       suffix: '.min',
@@ -47,21 +47,27 @@ function styles() {
     .pipe(browserSync.stream())
 }
 
-// function svgSprite() {
-//   return src('app/images/icon/*.svg')
-//     .pipe(svgstore())
-//     .pipe(dest('./app/images'))
-// }
+
+function htmlInclude() {
+  return src('app/html/pages/*.html')
+    .pipe(fileinclude({
+      prefix: '@@',
+      basepath: '@file'
+    }))
+    .pipe(dest('app'))
+    .pipe(browserSync.stream());
+}
 
 function watching() {
   watch(['app/scss/**/*.scss'], styles)
   watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts)
-  watch(['app/*.html', 'app/pages/*.html']).on('change', browserSync.reload)
+  watch('app/html/**/*.html', htmlInclude);
 }
 
 exports.styles = styles;
 exports.watching = watching;
 exports.browSersync = browsersync;
 exports.scripts = scripts;
+exports.htmlInclude = htmlInclude;
 
-exports.default = parallel(styles, scripts, browsersync, watching);
+exports.default = parallel(styles, scripts, browsersync, htmlInclude, watching);

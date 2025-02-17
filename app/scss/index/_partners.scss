@@ -21,11 +21,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    outline: 1px solid transparent;
-    transition: color 0.4s, border-color 0.4s, outline-color 0.4s;
+    transition: color 0.4s, border 0.4s, outline 0.4s;
 
     &:focus {
-      outline-color: $orange;
+      outline: 1px solid $orange;
       outline-offset: 4px;
     }
 

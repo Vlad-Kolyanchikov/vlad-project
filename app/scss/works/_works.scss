@@ -13,10 +13,8 @@
     padding: 11px 26px;
     border-radius: 4px;
     color: $black;
-    outline: 1px solid transparent;
-    outline-offset: 4px;
     background-color: #F5F4FA;
-    transition: color 0.4s, background-color 0.4s, outline-color 0.4s, box-shadow 0.4s;
+    transition: color 0.4s, background-color 0.4s, outline 0.4s, box-shadow 0.4s;
 
     &.mixitup-control-active {
       color: #FFFFFF;
@@ -24,7 +22,8 @@
     }
 
     &:focus {
-      outline-color: $orange;
+      outline: 1px solid $orange;
+      outline-offset: 4px;
     }
 
     &:hover {
