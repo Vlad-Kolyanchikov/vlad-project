@@ -14,7 +14,10 @@
 
 <body>
 
-  @@include('../components/header.html')
+  @@include('../components/header.html', {
+  "currentHome": "current",
+  "currentWorks": ""
+  })
 
   <main class="main">
 
@@ -193,7 +196,9 @@
                 Product Designer
               </p>
 
-              @@include('../index/social.html')
+              @@include('../components/social.html',{
+              "dark": ""
+              })
 
             </div>
             <img class="team__img" src="images/team/team-1.jpg" width="270" height="260" alt="Paul Castanie">
@@ -207,7 +212,9 @@
                 Frontend Developer
               </p>
 
-              @@include('../index/social.html')
+              @@include('../components/social.html',{
+              "dark": ""
+              })
 
             </div>
             <img class="team__img" src="images/team/team-2.jpg" width="270" height="260" alt="Joanna Nix">
@@ -220,9 +227,11 @@
               <p class="team__job-title">
                 Marketing
               </p>
-              
-              @@include('../index/social.html')
-              
+
+              @@include('../components/social.html',{
+              "dark": ""
+              })
+
             </div>
             <img class="team__img" src="images/team/team-3.jpg" width="270" height="260" alt="Aldo Delara">
           </li>
@@ -234,8 +243,10 @@
               <p class="team__job-title">
                 UI Designer
               </p>
-              
-              @@include('../index/social.html')
+
+              @@include('../components/social.html',{
+              "dark": ""
+              })
 
             </div>
             <img class="team__img" src="images/team/team-4.jpg" width="270" height="260" alt="Oladimeji Odunsi">

@@ -27,10 +27,10 @@
           <a href="index.html" class="header__link current">Home</a>
         </li>
         <li class="header__item">
-          <a href="works.html" class="header__link">Our Works</a>
+          <a href="works.html" class="header__link ">Our Works</a>
         </li>
         <li class="header__item">
-          <a href="#" class="header__link">Contacts</a>
+          <a href="#" class="header__link @@currentContacts">Contacts</a>
         </li>
       </ul>
     </nav>
@@ -116,8 +116,8 @@
                 class="form__input form__input--textarea"></textarea>
             </label>
             <div class="form__box--agree">
-              <label class="form__label form__label--agree">
-                <input required class="sr-only form__checkbox" type="checkbox" name="checkbox">
+              <label for="checkbox" class="form__label form__label--agree">
+                <input required id="checkbox" class="sr-only form__checkbox" type="checkbox" name="checkbox">
                 <span class="form__checkbox-style"></span>
                 I agree to the subscription and accept the
                 <a href="#" class="form__link">terms of use</a>
@@ -233,7 +233,7 @@
                 Product Designer
               </p>
 
-              <ul class="social">
+              <ul class="social social--">
   <li class="social__item">
     <a href="#user-social-link" class="social__link">
       <span class="sr-only">instagram user-name</span>
@@ -280,7 +280,7 @@
                 Frontend Developer
               </p>
 
-              <ul class="social">
+              <ul class="social social--">
   <li class="social__item">
     <a href="#user-social-link" class="social__link">
       <span class="sr-only">instagram user-name</span>
@@ -326,8 +326,8 @@
               <p class="team__job-title">
                 Marketing
               </p>
-              
-              <ul class="social">
+
+              <ul class="social social--">
   <li class="social__item">
     <a href="#user-social-link" class="social__link">
       <span class="sr-only">instagram user-name</span>
@@ -361,7 +361,7 @@
     </a>
   </li>
 </ul>
-              
+
             </div>
             <img class="team__img" src="images/team/team-3.jpg" width="270" height="260" alt="Aldo Delara">
           </li>
@@ -373,8 +373,8 @@
               <p class="team__job-title">
                 UI Designer
               </p>
-              
-              <ul class="social">
+
+              <ul class="social social--">
   <li class="social__item">
     <a href="#user-social-link" class="social__link">
       <span class="sr-only">instagram user-name</span>
@@ -503,40 +503,40 @@
       <span class="footer__subtitle">
         Join
       </span>
-      <ul class="social">
-        <li class="social__item">
-          <a href="#" class="social__link social__link--dark">
-            <span class="sr-only">instagram web studio DolGuldur</span>
-            <svg class="icon" width="20" height="20">
-              <use href="./images/sprite.svg#icon-instagram"></use>
-            </svg>
-          </a>
-        </li>
-        <li class="social__item">
-          <a href="#" class="social__link social__link--dark">
-            <span class="sr-only">twitter web studio DolGuldur</span>
-            <svg class="icon" width="20" height="20">
-              <use href="./images/sprite.svg#icon-twitter"></use>
-            </svg>
-          </a>
-        </li>
-        <li class="social__item">
-          <a href="#" class="social__link social__link--dark">
-            <span class="sr-only">facebook web studio DolGuldur</span>
-            <svg class="icon" width="20" height="20">
-              <use href="./images/sprite.svg#icon-facebook"></use>
-            </svg>
-          </a>
-        </li>
-        <li class="social__item">
-          <a href="#" class="social__link social__link--dark">
-            <span class="sr-only">linkedin web studio DolGuldur</span>
-            <svg class="icon" width="20" height="20">
-              <use href="./images/sprite.svg#icon-linkedin"></use>
-            </svg>
-          </a>
-        </li>
-      </ul>
+      <ul class="social social--dark">
+  <li class="social__item">
+    <a href="#user-social-link" class="social__link">
+      <span class="sr-only">instagram user-name</span>
+      <svg class="icon" width="20" height="20">
+        <use href="./images/sprite.svg#icon-instagram"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="social__item">
+    <a href="#user-social-link" class="social__link">
+      <span class="sr-only">twitter user-name</span>
+      <svg class="icon" width="20" height="20">
+        <use href="./images/sprite.svg#icon-twitter"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="social__item">
+    <a href="#user-social-link" class="social__link">
+      <span class="sr-only">facebook user-name</span>
+      <svg class="icon" width="20" height="20">
+        <use href="./images/sprite.svg#icon-facebook"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="social__item">
+    <a href="#user-social-link" class="social__link">
+      <span class="sr-only">linkedin user-name</span>
+      <svg class="icon" width="20" height="20">
+        <use href="./images/sprite.svg#icon-linkedin"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
     </div>
     <div class="footer__form-wrapper">
       <span class="footer__subtitle">
@@ -544,7 +544,7 @@
       </span>
       <form class="footer__form">
         <label for="footer-email" class="footer__label">
-          <input required id="footer-email" type="email" name="footer-email" class="form__input footer__input"
+          <input required id="footer-email" type="email" name="e-mail" class="form__input footer__input"
             placeholder="E-mail">
         </label>
         <button type="button" class="footer__btn button">

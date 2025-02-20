@@ -14,7 +14,10 @@
 
 <body>
 
-@@include('../components/header.html')
+  @@include('../components/header.html', {
+  "currentHome": "",
+  "currentWorks": "current"
+  })
 
 
   <main class="main">
@@ -181,7 +184,7 @@
 
   </main>
 
-@@include('../components/footer.html')
+  @@include('../components/footer.html')
 
   <script src="js/main.min.js"></script>
 </body>

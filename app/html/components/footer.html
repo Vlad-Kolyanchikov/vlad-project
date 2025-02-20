@@ -24,40 +24,9 @@
       <span class="footer__subtitle">
         Join
       </span>
-      <ul class="social">
-        <li class="social__item">
-          <a href="#" class="social__link social__link--dark">
-            <span class="sr-only">instagram web studio DolGuldur</span>
-            <svg class="icon" width="20" height="20">
-              <use href="./images/sprite.svg#icon-instagram"></use>
-            </svg>
-          </a>
-        </li>
-        <li class="social__item">
-          <a href="#" class="social__link social__link--dark">
-            <span class="sr-only">twitter web studio DolGuldur</span>
-            <svg class="icon" width="20" height="20">
-              <use href="./images/sprite.svg#icon-twitter"></use>
-            </svg>
-          </a>
-        </li>
-        <li class="social__item">
-          <a href="#" class="social__link social__link--dark">
-            <span class="sr-only">facebook web studio DolGuldur</span>
-            <svg class="icon" width="20" height="20">
-              <use href="./images/sprite.svg#icon-facebook"></use>
-            </svg>
-          </a>
-        </li>
-        <li class="social__item">
-          <a href="#" class="social__link social__link--dark">
-            <span class="sr-only">linkedin web studio DolGuldur</span>
-            <svg class="icon" width="20" height="20">
-              <use href="./images/sprite.svg#icon-linkedin"></use>
-            </svg>
-          </a>
-        </li>
-      </ul>
+      @@include('../components/social.html',{
+      "dark": "dark"
+      })
     </div>
     <div class="footer__form-wrapper">
       <span class="footer__subtitle">

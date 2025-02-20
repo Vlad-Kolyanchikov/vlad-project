@@ -1,0 +1,50 @@
+.modal {
+  transform: scale(1);
+  position: relative;
+  z-index: 7;
+  border-radius: 6px;
+  width: 528px;
+  background-color: #FFFFFF;
+  padding: 40px;
+  box-shadow: 8px 8px 3px rgba(0, 0, 0, 0.12);
+  transition: transform 0.4s;
+
+  &__svg {
+    fill: currentColor;
+  }
+
+  &__title {
+    text-align: center;
+    color: $black;
+    font-size: 20px;
+    margin-bottom: 11px;
+  }
+
+  &__close-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    transition: color 0.4s, border-color 0.4s, box-shadow 0.4s;
+
+    &:focus {
+      border-color: $orange;
+    }
+
+    &:hover {
+      color: $orange;
+    }
+
+    &:active {
+      box-shadow: inset 3px 3px 3px rgba(0, 0, 0, 0.12);
+      color: $orange;
+    }
+
+  }
+}

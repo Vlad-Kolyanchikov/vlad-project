@@ -1,0 +1,26 @@
+.backdrop {
+  position: fixed;
+  z-index: 5;
+  top: 0;
+  left: 0;
+  width: 100dvw;
+  height: 100dvh;
+  opacity: 1;
+  pointer-events: all;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(2px);
+  transition: opacity 0.4s;
+
+  &.is-hidden {
+    pointer-events: none;
+    opacity: 0;
+    backdrop-filter: blur(0);
+
+    .modal {
+      transform: scale(0);
+    }
+  }
+}
