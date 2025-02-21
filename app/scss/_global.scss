@@ -12,7 +12,6 @@ body {
   }
 }
 
-
 .sr-only {
   position: absolute;
   width: 1px;
@@ -88,19 +87,6 @@ body {
     margin-bottom: 49px;
     font-size: 36px;
     color: $black;
-  }
-}
-
-.control {
-  display: flex;
-  justify-content: center;
-  gap: 50px;
-  margin: 50px;
-
-  .btn {
-    font-size: 40px;
-    border: 2px solid red;
-    padding: 10px 20px;
   }
 }
 
