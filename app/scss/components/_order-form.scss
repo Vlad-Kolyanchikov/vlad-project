@@ -1,0 +1,158 @@
+.order-form {
+  text-align: center;
+
+  &__title {
+    text-align: center;
+    color: $black;
+    font-size: 20px;
+    margin-bottom: 11px;
+  }
+
+  &__label {
+    text-align: left;
+    position: relative;
+    display: block;
+    width: 100%;
+    color: $gray;
+    font-size: 12px;
+    letter-spacing: 0.01em;
+    margin-bottom: 10px;
+
+    &--big {
+      margin-bottom: 20px;
+    }
+
+    &--checkbox {
+      font-size: 14px;
+      line-height: 1.73;
+      margin-bottom: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  &__input {
+    margin-top: 4px;
+    display: block;
+    padding: 11px 12px 11px 40px;
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid rgba($black, 0.2);
+
+    &::placeholder {
+      transition: color 0.4s, border-color 0.4s;
+    }
+
+    &:focus {
+      border-color: $orange;
+
+      &::placeholder {
+        color: $orange;
+        border-color: $orange;
+      }
+
+      &+.order-form__icon {
+        fill: $orange;
+      }
+    }
+
+
+    &:hover {
+
+      &::placeholder {
+        color: rgba($orange, 0.7);
+      }
+
+      &+.order-form__icon {
+        fill: rgba($orange, 0.7);
+      }
+    }
+
+    &--textarea {
+      padding: 12px 16px;
+      width: 100%;
+      height: 120px;
+    }
+  }
+
+
+  &__icon {
+    position: absolute;
+    bottom: 11px;
+    left: 12px;
+    fill: $black;
+    transition: fill 0.4s;
+  }
+
+  &__checkbox {
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+
+    &:focus {
+      &+.order-form__fake-checkbox {
+        outline: 1px solid $orange;
+      }
+    }
+
+    &:hover {
+      &+.order-form__fake-checkbox {
+        box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.4);
+      }
+    }
+
+    &:active {
+      &+.order-form__fake-checkbox {
+        opacity: 0.7;
+      }
+    }
+
+
+    &:checked {
+      &+.order-form__fake-checkbox {
+        background-color: $orange;
+        border-color: transparent;
+      }
+    }
+  }
+
+  &__fake-checkbox {
+    outline-offset: 2px;
+    cursor: pointer;
+    margin-right: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
+    border-radius: 2px;
+    border: 1px solid #000;
+    transition: outline 0.4s, box-shadow 0.4s, box-shadow 0.4s;
+  }
+
+  &__link {
+    display: inline-block;
+    color: $orange;
+    text-decoration: underline;
+    transition: opacity 0.4s, box-shadow 0.4s, outline 0.4s;
+    border-radius: 2px;
+    outline-offset: 2px;
+
+    &:focus {
+      outline: 1px solid $orange;
+    }
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    &:active {
+      box-shadow: 4px 4px 3px rgba(0, 0, 0, 0.4);
+    }
+  }
+
+  &__button {
+    color: #FFFFFF;
+  }
+}

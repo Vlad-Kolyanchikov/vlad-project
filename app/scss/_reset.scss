@@ -61,6 +61,7 @@ textarea,
 select {
   font: inherit;
   border: none;
+  outline: transparent;
 }
 
 a {
@@ -71,11 +72,9 @@ a {
 
 button {
   padding: 0;
-  font: inherit;
   color: inherit;
   background-color: transparent;
   cursor: pointer;
-  outline: transparent;
 }
 
 textarea {

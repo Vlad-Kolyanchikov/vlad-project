@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="user-viewport" content="width=device-width, initial-scale=1.0">
   <title>Web Studio DolGuldur</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -41,56 +41,59 @@
       </div>
       <div class="backdrop is-hidden" data-modal>
         <div class="modal">
+          <form class="order-form">
+            <h2 class="order-form__title">
+              Tell about yourself and we will contact you
+            </h2>
+            <label class="order-form__label" for="name">
+              Name
+              <input required id="name" type="text" name="user-name" class="order-form__input">
+              <svg class=" icon order-form__icon" width="18" height="18">
+                <use href="./images/sprite.svg#icon-person-form"></use>
+              </svg>
+
+            </label>
+            <label class="order-form__label" for="phone">
+              Phone
+              <input required id="phone" type="tel" name="user-phone" class="order-form__input">
+              <svg class=" icon order-form__icon" width="18" height="18">
+                <use href="./images/sprite.svg#icon-phone-form"></use>
+              </svg>
+            </label>
+            <label class="order-form__label" for="email">
+              E-mail
+              <input required id="email" type="email" name="user-e-mail" class="order-form__input">
+              <svg class=" icon order-form__icon" width="18" height="18">
+                <use href="./images/sprite.svg#icon-email-form"></use>
+              </svg>
+            </label>
+            <label class="order-form__label order-form__label--big" for="message">
+              Message
+              <textarea required id="message" placeholder="Your message..." name="user-text"
+                class="order-form__input order-form__input--textarea"></textarea>
+            </label>
+
+            <label for="checkbox" class="order-form__label order-form__label--checkbox">
+              <input required id="checkbox" class="order-form__checkbox" type="checkbox" name="user-checkbox">
+              <span class="order-form__fake-checkbox">
+                <svg class="icon" width="10" height="8">
+                  <use href="./images/sprite.svg#icon-check"></use>
+                </svg>
+              </span>
+              I agree to the subscription and accept the
+              <a href="#" class="order-form__link">Terms of use</a>
+            </label>
+            <button type="submit" class="button order-form__button">
+              Submit
+            </button>
+
+          </form>
           <button class="modal__close-btn" type="button" data-modal-close>
             <svg class="modal__svg" width="30" height="30">
               <use href="./images/sprite.svg#icon-cancel"></use>
             </svg>
             <span class="sr-only">close modal window</span>
           </button>
-          <h2 class="modal__title">
-            Tell about yourself and we will contact you
-          </h2>
-          <form class="form">
-            <label class="form__label" for="name">
-              Name
-              <input required id="name" type="text" name="user-name" class="form__input">
-              <svg class=" icon form__icon" width="18" height="18">
-                <use href="./images/sprite.svg#icon-person-form"></use>
-              </svg>
-
-            </label>
-            <label class="form__label" for="phone">
-              Phone
-              <input required id="phone" type="tel" name="phone" class="form__input">
-              <svg class=" icon form__icon" width="18" height="18">
-                <use href="./images/sprite.svg#icon-phone-form"></use>
-              </svg>
-            </label>
-            <label class="form__label" for="email">
-              E-mail
-              <input required id="email" type="email" name="e-mail" class="form__input">
-              <svg class=" icon form__icon" width="18" height="18">
-                <use href="./images/sprite.svg#icon-email-form"></use>
-              </svg>
-            </label>
-            <label class="form__label form__label--big" for="message">
-              Message
-              <textarea required id="message" placeholder="Your message..." name="text"
-                class="form__input form__input--textarea"></textarea>
-            </label>
-            <div class="form__box--agree">
-              <label for="checkbox" class="form__label form__label--agree">
-                <input required id="checkbox" class="sr-only form__checkbox" type="checkbox" name="checkbox">
-                <span class="form__checkbox-style"></span>
-                I agree to the subscription and accept the
-                <a href="#" class="form__link">terms of use</a>
-              </label>
-              <button type="submit" class="button form__btn">
-                Submit
-              </button>
-            </div>
-          </form>
-
         </div>
       </div>
     </section>
@@ -197,7 +200,12 @@
               </p>
 
               @@include('../components/social.html',{
-              "dark": ""
+              "dark": "",
+              "instagram-link": "https://www.instagram.com/paul_castanie",
+              "twitter-link": "https://www.twitter.com/paul_castanie",
+              "facebook-link": "https://www.facebook.com/paul_castanie",
+              "linkedin-link": "https://www.linkedin.com/paul_castanie",
+              "user-name": "Paul Castanie"
               })
 
             </div>
@@ -213,7 +221,12 @@
               </p>
 
               @@include('../components/social.html',{
-              "dark": ""
+              "dark": "",
+              "instagram-link": "https://www.instagram.com/joanna_nix",
+              "twitter-link": "https://www.twitter.com/joanna_nix",
+              "facebook-link": "https://www.facebook.com/joanna_nix",
+              "linkedin-link": "https://www.linkedin.com/joanna_nix",
+              "user-name": "Joanna Nix"
               })
 
             </div>
@@ -229,7 +242,12 @@
               </p>
 
               @@include('../components/social.html',{
-              "dark": ""
+              "dark": "",
+              "instagram-link": "https://www.instagram.com/aldo_delara",
+              "twitter-link": "https://www.twitter.com/aldo_delara",
+              "facebook-link": "https://www.facebook.com/aldo_delara",
+              "linkedin-link": "https://www.linkedin.com/aldo_delara",
+              "user-name": "Aldo Delara"
               })
 
             </div>
@@ -245,7 +263,12 @@
               </p>
 
               @@include('../components/social.html',{
-              "dark": ""
+              "dark": "",
+              "instagram-link": "https://www.instagram.com/oladimeji_odunsi",
+              "twitter-link": "https://www.twitter.com/oladimeji_odunsi",
+              "facebook-link": "https://www.facebook.com/oladimeji_odunsi",
+              "linkedin-link": "https://www.linkedin.com/oladimeji_odunsi",
+              "user-name": "Oladimeji Odunsi"
               })
 
             </div>

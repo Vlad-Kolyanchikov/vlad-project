@@ -24,26 +24,22 @@
       <span class="footer__subtitle">
         Join
       </span>
+
       @@include('../components/social.html',{
-      "dark": "dark"
+      "dark": "dark",
+      "instagram-link": "https://www.instagram.com/dolguldur",
+      "twitter-link": "https://www.twitter.com/dolguldur",
+      "facebook-link": "https://www.facebook.com/dolguldur",
+      "linkedin-link": "https://www.linkedin.com/dolguldur",
+      "user-name": "wed studio DolGuldur"
       })
+
     </div>
     <div class="footer__form-wrapper">
       <span class="footer__subtitle">
         subscribe
       </span>
-      <form class="footer__form">
-        <label for="footer-email" class="footer__label">
-          <input required id="footer-email" type="email" name="e-mail" class="form__input footer__input"
-            placeholder="E-mail">
-        </label>
-        <button type="button" class="footer__btn button">
-          Subscribe
-          <svg class="icon" width="24" height="24">
-            <use href="./images/sprite.svg#icon-sheet"></use>
-          </svg>
-        </button>
-      </form>
+      @@include('../components/subscribe-form.html')
     </div>
   </div>
 
